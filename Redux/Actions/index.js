@@ -2,7 +2,7 @@ import { USER_STATE_CHANGE, USERS_DATA_STATE_CHANGE } from "../Constants";
 import firebase from "firebase"
 require('firebase/firestore')
 
-export function fetchUser(){
+export function fetchUsers(){
     return(dispatch) => {
         firebase.firestore()
         .collection('users')

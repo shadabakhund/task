@@ -20,7 +20,8 @@ export class signup extends Component {
                 .doc(firebase.auth().currentUser.uid)
                 .set({
                     name,
-                    email
+                    email,
+                    uid: result.user.uid
                 })
                 console.log(result)
             })

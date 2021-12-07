@@ -1,0 +1,46 @@
+// import React, { useEffect, useState } from 'react'
+// import { View, Text, FlatList, TouchableOpacity, StyleSheet, SafeAreaView, Button} from 'react-native'
+// import firebase from 'firebase'
+
+
+// function profile(props) {
+//     const [name,setName]=useState()
+//     const [email,setEmail]=useState()
+    
+    
+//     useEffect(()=>{
+//         getUserInfo()
+//     }, [])
+
+//     const getUserInfo=()=>{
+//         firebase.firestore()
+//             .collection('users')
+//             .doc(firebase.auth().currentUser.uid)
+//             .get()
+//             .then(result =>{
+//                 setName(result.data().name)
+//                 setEmail(result.data().email)
+//             })
+//     }
+
+//     return (
+//         <SafeAreaView>
+//         <Text style={{textAlign:"center"}}>Profile</Text>
+//         <Text>Current Username: {name}</Text>
+//         <Text>Current UserEmail: {email}</Text>
+
+//         <Button
+//             title="Edit"
+ 
+//         />
+//       <Button
+//         title="SignOut"
+//         onPress={()=>firebase.auth().signOut()}
+//       />
+      
+//       </SafeAreaView>
+        
+//     )
+// }
+
+//   export default profile;

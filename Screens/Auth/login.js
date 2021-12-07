@@ -1,6 +1,9 @@
 import React,{ Component } from 'react';
  import { View, Text,  Button, TextInput, StyleSheet } from "react-native"; 
  import * as firebase from "firebase"
+import users from '../Pages/users';
+import { USER_STATE_CHANGE } from '../../Redux/Constants';
+import { connect } from 'react-redux';
  class login extends Component {
      constructor(props){
          super(props);
@@ -15,6 +18,7 @@ import React,{ Component } from 'react';
 firebase.auth().signInWithEmailAndPassword(email,password)
 .then((result) =>{
     console.log(result)
+   
 })
 .catch((error) =>{
     console.log(error)
@@ -68,5 +72,5 @@ const styles =  StyleSheet.create({
     }
 })
 
-  export default login
+export default login
 
